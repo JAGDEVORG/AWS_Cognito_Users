@@ -4,16 +4,12 @@ namespace AWS_Cognito_Users.Models.Accounts
 {
     public class LoginModel
     {
-        [Required(ErrorMessage = "Email is required.")]
+        [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Password is required.")]
+        [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
         public string Password { get; set; }
-
-        [Display(Name = "Remember Me")] public bool RememberMe { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

@@ -4,13 +4,11 @@ namespace AWS_Cognito_Users.Models.Accounts
 {
     public class ConfirmModel
     {
-        [Required(ErrorMessage = "Email is required.")]
-        [Display(Name = "Email")]
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Code is requred.")]
-        [Display(Name = "Code")]
+        [Required]
         public string Code { get; set; }
     }
 }
