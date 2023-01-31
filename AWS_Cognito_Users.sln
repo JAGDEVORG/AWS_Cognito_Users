@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS_Cognito_Users", "AWS_Cognito_Users\AWS_Cognito_Users.csproj", "{03A52100-2987-4F8D-A21D-360F28A1AD76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS_Cognito_Users", "AWS_Cognito_Users\AWS_Cognito_Users.csproj", "{03A52100-2987-4F8D-A21D-360F28A1AD76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS_Web_Authentication", "AWS_Web_Authentication\AWS_Web_Authentication.csproj", "{27B20A57-2069-40CB-8377-4048A4B9F7DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{03A52100-2987-4F8D-A21D-360F28A1AD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03A52100-2987-4F8D-A21D-360F28A1AD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03A52100-2987-4F8D-A21D-360F28A1AD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B20A57-2069-40CB-8377-4048A4B9F7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B20A57-2069-40CB-8377-4048A4B9F7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B20A57-2069-40CB-8377-4048A4B9F7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B20A57-2069-40CB-8377-4048A4B9F7DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
