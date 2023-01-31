@@ -43,6 +43,8 @@ namespace AWS_Cognito_Users.Controllers
             }
 
             user.Attributes.Add("name", model.Email);
+            user.Attributes.Add("gender", model.Gender);
+            user.Attributes.Add("address", model.Address);
             var createdUser = await _userManager.CreateAsync(user, model.Password).ConfigureAwait(false);
             responseModel.IsSuccess = createdUser.Succeeded;
             responseModel.Content = JsonConvert.SerializeObject(createdUser);
