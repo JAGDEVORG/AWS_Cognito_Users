@@ -28,6 +28,18 @@ builder.Services.AddAuthentication(options =>
     {
         NameClaimType = "cognito:username",
     };
+
+    options.Events = new OpenIdConnectEvents
+    {
+        OnRedirectToIdentityProviderForSignOut = (context) =>
+        {
+            var logoutUri = builder.Configuration["Authentication:Cognito:LogoutUrl"];
+            logoutUri += $"?client_id={options.ClientId}&logout_uri={builder.Configuration["Authentication:Cognito:BaseUrl"]}";
+            context.Response.Redirect(logoutUri);
+            context.HandleResponse();
+            return Task.CompletedTask;
+        }
+    };
 });
 
 var app = builder.Build();

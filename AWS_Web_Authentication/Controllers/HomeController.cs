@@ -1,4 +1,6 @@
 ﻿using AWS_Web_Authentication.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -20,9 +22,14 @@ namespace AWS_Web_Authentication.Controllers
         }
 
         [Authorize]
-        public IActionResult Privacy()
+        public IActionResult Login()
         {
             return View();
+        }
+
+        public IActionResult Logout()
+        {
+            return SignOut(new string[] { CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
